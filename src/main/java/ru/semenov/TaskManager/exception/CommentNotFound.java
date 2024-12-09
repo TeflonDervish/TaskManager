@@ -5,4 +5,3 @@ public class CommentNotFound extends RuntimeException {
     super(message);
   }
 }
-

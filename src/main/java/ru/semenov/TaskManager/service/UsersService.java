@@ -1,6 +1,5 @@
 package ru.semenov.TaskManager.service;
 
-import jakarta.annotation.sql.DataSourceDefinitions;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import org.springframework.stereotype.Service;
@@ -13,7 +12,7 @@ import java.util.Optional;
 @Service
 @Data
 @AllArgsConstructor
-public class UserService {
+public class UsersService {
 
     private UserRepository userRepository;
 

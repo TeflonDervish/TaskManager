@@ -17,19 +17,19 @@ public class CommentService {
     @Autowired
     private CommentRepository commentRepository;
 
-    private List<Comment> getAll() {
+    public List<Comment> getAll() {
         return commentRepository.findAll();
     }
 
-    private Optional<Comment> getById(Long id) {
+    public Optional<Comment> getById(Long id) {
         return commentRepository.findById(id);
     }
 
-    private Comment saveComment(Comment comment) {
+    public Comment saveComment(Comment comment) {
         return commentRepository.save(comment);
     }
 
-    private void deleteById(Long id) {
+    public void deleteById(Long id) {
         commentRepository.deleteById(id);
     }
 }

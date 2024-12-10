@@ -18,19 +18,19 @@ public class TaskService {
     @Autowired
     private TaskRepository taskRepository;
 
-    private List<Task> getAll() {
+    public List<Task> getAll() {
         return taskRepository.findAll();
     }
 
-    private Optional<Task> getById(Long id) {
+    public Optional<Task> getById(Long id) {
         return taskRepository.findById(id);
     }
 
-    private Task saveTask(Task task) {
+    public Task saveTask(Task task) {
         return taskRepository.save(task);
     }
 
-    private void deleteById(Long id) {
+    public void deleteById(Long id) {
         taskRepository.deleteById(id);
     }
 }

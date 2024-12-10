@@ -2,6 +2,7 @@ package ru.semenov.TaskManager.service;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import ru.semenov.TaskManager.model.Task;
 import ru.semenov.TaskManager.repository.TaskRepository;
@@ -14,6 +15,7 @@ import java.util.Optional;
 @AllArgsConstructor
 public class TaskService {
 
+    @Autowired
     private TaskRepository taskRepository;
 
     private List<Task> getAll() {

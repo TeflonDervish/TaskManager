@@ -1,7 +1,9 @@
 package ru.semenov.TaskManager.service;
 
+import jakarta.annotation.sql.DataSourceDefinitions;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import ru.semenov.TaskManager.model.Users;
 import ru.semenov.TaskManager.repository.UserRepository;
@@ -11,9 +13,9 @@ import java.util.Optional;
 
 @Service
 @Data
-@AllArgsConstructor
-public class UsersService {
+public class UserService {
 
+    @Autowired
     private UserRepository userRepository;
 
     public List<Users> getAll() {
